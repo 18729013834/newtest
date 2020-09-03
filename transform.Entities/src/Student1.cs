@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using MetaShare.Common.Core.Entities;
 /*add customized code between this region*/
+Public string Name {get;set;}
 /*add customized code between this region*/
 
 namespace transform.Entities.src
