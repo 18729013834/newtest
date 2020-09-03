@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>1.0.00001</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF549AA2-9F36-427C-A8AB-2B2185D73298}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>transform.Services.Tests</RootNamespace>
+    <AssemblyName>transform.Services.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Core">
+      <HintPath>..\CommonLib\Common.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <!--add customized code between this region-->
+    <!--add customized code between this region-->
+  </ItemGroup>
+  <ItemGroup>
+
+    <Compile Include="Common\CommonServiceTest.cs" />
+
+    <Compile Include="src\Student1ServiceTest.cs" />
+
+    <Compile Include="src\courseServiceTest.cs" />
+
+    <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <!--add customized code between this region-->
+    <!--add customized code between this region-->
+  </ItemGroup>
+  <ItemGroup>
+
+    <ProjectReference Include="..\transform.Services\transform.Services.csproj">
+      <Project>{779BB030-6288-4872-B7F3-D591E8FFB280}</Project>
+      <Name>transform.Services</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\transform.Services.Interfaces\transform.Services.Interfaces.csproj">
+      <Project>{3ACC767B-4569-44E8-97F5-0C865D2FD108}</Project>
+      <Name>transform.Services.Interfaces</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\transform.Entities\transform.Entities.csproj">
+      <Project>{41975EF2-B282-4852-8A9D-0CB06B1EFA56}</Project>
+      <Name>transform.Entities</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\transform.TestData\transform.TestData.csproj">
+      <Project>{5DDF1D92-4EB3-43DF-9FC1-0EFD7B58F4C1}</Project>
+      <Name>transform.TestData</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\transform.Daos.Mocks\transform.Daos.Mocks.csproj">
+      <Project>{BB353786-D6A8-4A3B-9479-839695A40827}</Project>
+      <Name>transform.Daos.Mocks</Name>
+    </ProjectReference>
+
+    <!--add customized code between this region-->
+    <!--add customized code between this region-->
+  </ItemGroup>
+ <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

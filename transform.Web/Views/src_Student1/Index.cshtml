@@ -1,0 +1,41 @@
+﻿@using MetaShare.Common.Core.Presentation
+@using transform.Entities
+@using transform.Web.HtmlExtensions
+@using transform.Web.Models
+@using transform.Entities.src
+<!--add customized code between this region-->
+<!--add customized code between this region-->
+
+@model IndexViewModel<transform.Entities.src.Student1>
+@{
+    ViewBag.Title = "Index";
+    Layout  = "~/Views/Shared/_Layout.cshtml";
+<!--add customized code between this region-->
+<!--add customized code between this region-->
+}
+
+<div class="m_title_box">
+    <ol>
+        <li data-id="src">
+            <a href="#">src</a><i class="icon-arrowright"></i>
+        </li>
+        <li data-id="Student1">
+            <a href="#">Student1</a><i class="icon-arrowright"></i>
+        </li>
+        <li data-id="Index">Index</li>
+    </ol>
+    <div class="m_title_action">
+        <a class="m_btn" href="@(this.Url.Action("Create", "Student1", null))">New</a>
+    </div>
+</div>
+<div class="panel panel-default">
+    
+    <div class="panel-heading">Student1</div>
+    <div class="panel-body">
+            @Html.Partial(Url.Content("../src_Student1/_Search"), Model.SearchModel)
+    <div class="table-responsive" id="Student1_DataList">
+            @Html.Partial(Url.Content("../src_Student1/_DataList"), Model)
+    </div>
+    </div>
+</div>
+@this.Html.Partial("_DeleteDialog")
